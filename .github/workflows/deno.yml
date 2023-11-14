@@ -1,0 +1,59 @@
+name: Deno
+
+on:
+  push:
+  pull_request:
+  schedule:
+    # Check if it works with current versions
+    - cron: '42 2 * * 6' # weekly on Saturday 2:42 UTC
+
+jobs:
+  denofmt-and-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+      - uses: actions/checkout@v4
+
+      - run: deno lint
+      - run: deno fmt --check
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+      - uses: actions/checkout@v4
+
+      - run: deno cache source/*.ts
+      - run: deno check source/*.ts
+      - run: deno test
+
+  npm:
+    name: Node.js Package
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm install
+      - run: npm pack
+      - run: npm publish
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_ACCESS: public
+          NPM_CONFIG_PROVENANCE: true
+      - name: Create GitHub release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v1
