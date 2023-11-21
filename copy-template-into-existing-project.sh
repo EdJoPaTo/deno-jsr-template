@@ -8,11 +8,11 @@ set -eu
 # ~/git/deno-node-module-template/copy-template-into-existing-project.sh
 
 name=$(basename "$PWD")
-denoname="${name/-/_}"
+denoname="${name/-/_}" # TODO: replace all not only one occurance (see array-filter-unique)
 templatedir="$(dirname "$0")"
 
 cp -r \
-	"$templatedir/"{deno.jsonc,package.json,tsconfig.json,.editorconfig,.gitattributes,.github,.gitignore,.npmrc} \
+	"$templatedir/"{deno.jsonc,package.json,tsconfig.json,README.md,.editorconfig,.gitattributes,.github,.gitignore,.npmrc} \
 	.
 cp -r \
 	"$templatedir/source/"{deps.test.ts,README.md} \
@@ -22,8 +22,7 @@ echo "everything copied"
 
 # Replace template name with folder name
 # macOS: add '' after -i like this: sed -i '' "s/…
-sed -i "s/deno-node-module-template/$name/g" package.json LICENSE ./**/*.md .github/**/*.yml
-sed -i "s/deno_node_module_template/$denoname/g" ./**/*.md
+sed -i "s/deno-node-module-template/$name/g" package.json LICENSE ./*.md ./**/*.md .github/**/*.yml
+sed -i "s/deno_node_module_template/$denoname/g" ./*.md ./**/*.md
 
-git checkout -p .gitignore
 git --no-pager status --short
