@@ -4,6 +4,8 @@
 [![node](https://img.shields.io/node/v/deno-node-module-template.svg)](https://www.npmjs.com/package/deno-node-module-template)
 [![deno module](https://shield.deno.dev/x/deno_node_module_template)](https://deno.land/x/deno_node_module_template)
 
+> Template for a platform independent Deno & Node.js library.
+
 ## Install
 
 Node.js:
