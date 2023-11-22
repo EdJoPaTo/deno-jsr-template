@@ -8,7 +8,7 @@ set -eu
 # ~/git/deno-node-module-template/copy-template-into-existing-project.sh
 
 name=$(basename "$PWD")
-denoname="${name/-/_}" # TODO: replace all not only one occurance (see array-filter-unique)
+denoname="${name//-/_}"
 templatedir="$(dirname "$0")"
 
 cp -r \
