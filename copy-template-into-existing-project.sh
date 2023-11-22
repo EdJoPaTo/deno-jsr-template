@@ -15,7 +15,7 @@ cp -r \
 	"$templatedir/"{deno.jsonc,package.json,tsconfig.json,README.md,.editorconfig,.gitattributes,.github,.gitignore,.npmrc} \
 	.
 cp -r \
-	"$templatedir/source/"{deps.test.ts,README.md} \
+	"$templatedir/source/"README.md \
 	./source/
 
 echo "everything copied"

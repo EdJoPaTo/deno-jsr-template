@@ -1,12 +1,13 @@
-import { assertEquals, assertThrows } from "./deps.test.ts";
+import { strictEqual, throws } from "node:assert";
+import { test } from "node:test";
 import { moduleName } from "./mod.ts";
 
-Deno.test("simple string input", () => {
-	assertEquals(moduleName("unicorns"), "unicorns & rainbows");
+test("simple string input", () => {
+	strictEqual(moduleName("unicorns"), "unicorns & rainbows");
 });
 
-Deno.test("javascript users without typings get error on number", () => {
-	assertThrows(
+test("javascript users without typings get error on number", () => {
+	throws(
 		() => {
 			// @ts-expect-error moduleName expects a string not a number
 			moduleName(123);
