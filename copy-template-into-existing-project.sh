@@ -25,4 +25,6 @@ echo "everything copied"
 sed -i "s/deno-node-module-template/$name/g" package.json LICENSE ./*.md ./**/*.md .github/**/*.yml
 sed -i "s/deno_node_module_template/$denoname/g" ./*.md ./**/*.md
 
+deno fmt
+
 git --no-pager status --short
