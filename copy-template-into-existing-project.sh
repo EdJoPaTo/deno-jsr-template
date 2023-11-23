@@ -23,7 +23,7 @@ echo "everything copied"
 # Replace template name with folder name
 # macOS: add '' after -i like this: sed -i '' "s/…
 sed -i "s/deno-node-module-template/$name/g" package.json LICENSE ./*.md ./**/*.md .github/**/*.yml
-sed -i "s/deno_node_module_template/$denoname/g" ./*.md ./**/*.md
+sed -i "s/deno_node_module_template/$denoname/g" ./*.md ./**/*.md deno.jsonc
 
 deno fmt
 

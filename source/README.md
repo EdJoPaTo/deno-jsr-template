@@ -2,4 +2,5 @@
 
 See the
 [README on GitHub](https://github.com/EdJoPaTo/deno-node-module-template#readme)
-for more information on this package.
+or the
+[documentation on deno.land](https://deno.land/x/deno-node-module-template?doc).

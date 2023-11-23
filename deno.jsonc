@@ -15,6 +15,7 @@
 	},
 	"exclude": [
 		"./dist/",
+		"./docs/",
 		"./node_modules/"
 	],
 	"fmt": {
@@ -35,5 +36,8 @@
 				"no-sparse-arrays"
 			]
 		}
+	},
+	"tasks": {
+		"doc": "deno doc --html --name=deno_node_module_template source/mod.ts"
 	}
 }
