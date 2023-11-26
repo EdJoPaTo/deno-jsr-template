@@ -31,8 +31,8 @@
 	},
 	"files": [
 		"dist",
-		"!**/*.test.*",
-		"!**/test.*"
+		"!*.test.*",
+		"!test.*"
 	],
 	"main": "./dist/mod.js",
 	"types": "./dist/mod.d.ts"
