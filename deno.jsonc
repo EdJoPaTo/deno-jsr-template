@@ -14,6 +14,7 @@
 		"useUnknownInCatchVariables": true
 	},
 	"exclude": [
+		"./coverage/",
 		"./dist/",
 		"./docs/",
 		"./node_modules/"
@@ -38,6 +39,7 @@
 		}
 	},
 	"tasks": {
+		"coverage": "deno test --coverage=coverage/ && deno coverage coverage/",
 		"doc": "deno doc --html --name=deno_node_module_template source/mod.ts"
 	}
 }
