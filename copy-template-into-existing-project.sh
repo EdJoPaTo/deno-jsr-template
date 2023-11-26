@@ -12,7 +12,7 @@ denoname="${name//-/_}"
 templatedir="$(dirname "$0")"
 
 cp -r \
-	"$templatedir/"{deno.jsonc,package.json,tsconfig.json,README.md,.editorconfig,.gitattributes,.github,.gitignore,.npmrc} \
+	"$templatedir/"{deno.jsonc,package.json,tsconfig.json,README.md,LICENSE.txt,.editorconfig,.gitattributes,.github,.gitignore,.npmrc} \
 	.
 cp -r \
 	"$templatedir/source/"README.md \
@@ -22,8 +22,8 @@ echo "everything copied"
 
 # Replace template name with folder name
 # macOS: add '' after -i like this: sed -i '' "s/…
-sed -i "s/deno-node-module-template/$name/g" package.json LICENSE ./*.md ./**/*.md .github/**/*.yml
-sed -i "s/deno_node_module_template/$denoname/g" ./*.md ./**/*.md deno.jsonc
+sed -i "s/deno-node-module-template/$name/g" package.json ./*.md ./**/*.md
+sed -i "s/deno_node_module_template/$denoname/g" deno.jsonc ./*.md ./**/*.md
 
 deno fmt
 
