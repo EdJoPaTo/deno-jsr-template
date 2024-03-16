@@ -10,22 +10,17 @@ set -eu
 git diff --quiet || (echo "repo unclean. stage or commit first" && exit 1)
 
 name=$(basename "$PWD")
-denoname="${name//-/_}"
 templatedir="$(dirname "$0")"
 
 cp -r \
 	"$templatedir/"{deno.jsonc,package.json,tsconfig.json,README.md,LICENSE.txt,.editorconfig,.gitattributes,.github,.gitignore,.npmrc} \
 	.
-cp -r \
-	"$templatedir/source/"README.md \
-	./source/
 
 echo "everything copied"
 
 # Replace template name with folder name
 # macOS: add '' after -i like this: sed -i '' "s/…
-sed -i "s/deno-node-module-template/$name/g" package.json ./*.md ./**/*.md
-sed -i "s/deno_node_module_template/$denoname/g" deno.jsonc ./*.md ./**/*.md
+sed -i "s/deno-node-module-template/$name/g" deno.jsonc package.json ./*.md
 
 deno fmt
 
