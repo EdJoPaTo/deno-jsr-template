@@ -1,9 +1,9 @@
-# deno-node-module-template
+# deno-jsr-template
 
-[![NPM Version](https://img.shields.io/npm/v/deno-node-module-template.svg)](https://www.npmjs.com/package/deno-node-module-template)
-[![node](https://img.shields.io/node/v/deno-node-module-template.svg)](https://www.npmjs.com/package/deno-node-module-template)
-[![JSR Version](https://jsr.io/badges/@edjopato/deno-node-module-template)](https://jsr.io/@edjopato/deno-node-module-template)
-[![JSR Score](https://jsr.io/badges/@edjopato/deno-node-module-template/score)](https://jsr.io/@edjopato/deno-node-module-template/score)
+[![NPM Version](https://img.shields.io/npm/v/deno-jsr-template.svg)](https://www.npmjs.com/package/deno-jsr-template)
+[![node](https://img.shields.io/node/v/deno-jsr-template.svg)](https://www.npmjs.com/package/deno-jsr-template)
+[![JSR Version](https://jsr.io/badges/@edjopato/deno-jsr-template)](https://jsr.io/@edjopato/deno-jsr-template)
+[![JSR Score](https://jsr.io/badges/@edjopato/deno-jsr-template/score)](https://jsr.io/@edjopato/deno-jsr-template/score)
 
 > Template for a platform independent Deno & Node.js library.
 
@@ -12,19 +12,19 @@
 Node.js:
 
 ```bash
-npm install deno-node-module-template
+npm install deno-jsr-template
 ```
 
 Deno:
 
 ```bash
-deno add @edjopato/deno-node-module-template
+deno add @edjopato/deno-jsr-template
 ```
 
 ## Usage
 
 ```ts
-import { myFunction } from "deno-node-module-template";
+import { myFunction } from "deno-jsr-template";
 
 myFunction("unicorns");
 //=> 'unicorns & rainbows'

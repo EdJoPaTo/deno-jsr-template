@@ -1,5 +1,5 @@
 {
-	"name": "deno-node-module-template",
+	"name": "deno-jsr-template",
 	"version": "0.1.0",
 	"description": "",
 	"keywords": [
@@ -8,11 +8,11 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/EdJoPaTo/deno-node-module-template.git"
+		"url": "git+https://github.com/EdJoPaTo/deno-jsr-template.git"
 	},
 	"author": {
 		"name": "EdJoPaTo",
-		"email": "deno-node-module-template-typescript-package@edjopato.de",
+		"email": "deno-jsr-template-typescript-package@edjopato.de",
 		"url": "https://edjopato.de"
 	},
 	"scripts": {

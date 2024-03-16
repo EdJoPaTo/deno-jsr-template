@@ -5,7 +5,7 @@ set -eu
 # Go to the project you want to improve via this template
 # cd ~/git/my-project
 # Run this script from the working directory of that project
-# ~/git/deno-node-module-template/copy-template-into-existing-project.sh
+# ~/git/deno-jsr-template/copy-template-into-existing-project.sh
 
 git diff --quiet || (echo "repo unclean. stage or commit first" && exit 1)
 
@@ -20,7 +20,7 @@ echo "everything copied"
 
 # Replace template name with folder name
 # macOS: add '' after -i like this: sed -i '' "s/…
-sed -i "s/deno-node-module-template/$name/g" deno.jsonc package.json ./*.md
+sed -i "s/deno-jsr-template/$name/g" deno.jsonc package.json ./*.md
 
 deno fmt
 

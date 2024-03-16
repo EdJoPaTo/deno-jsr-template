@@ -1,5 +1,5 @@
 {
-	"name": "@edjopato/deno-node-module-template",
+	"name": "@edjopato/deno-jsr-template",
 	"version": "0.0.0",
 	"exports": "./source/mod.ts",
 	"lock": false,
@@ -51,6 +51,6 @@
 	},
 	"tasks": {
 		"coverage": "deno test --coverage=coverage/ && deno coverage coverage/",
-		"doc": "deno doc --html --name=deno-node-module-template source/mod.ts"
+		"doc": "deno doc --html --name=deno-jsr-template source/mod.ts"
 	}
 }
