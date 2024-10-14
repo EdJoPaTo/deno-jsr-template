@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: denoland/setup-deno@v2
         with:
-          deno-version: v1.x
+          deno-version: v2.x
       - uses: actions/checkout@v4
 
       - run: deno lint
@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: denoland/setup-deno@v2
         with:
-          deno-version: v1.x
+          deno-version: v2.x
       - uses: actions/checkout@v4
 
       - run: deno cache source/*.ts
@@ -39,7 +39,7 @@ jobs:
     steps:
       - uses: denoland/setup-deno@v2
         with:
-          deno-version: v1.x
+          deno-version: v2.x
       - uses: actions/checkout@v4
 
       - run: deno cache source/mod.ts
@@ -51,7 +51,7 @@ jobs:
     steps:
       - uses: denoland/setup-deno@v2
         with:
-          deno-version: v1.x
+          deno-version: v2.x
       - uses: actions/checkout@v4
 
       - run: deno cache source/mod.ts
@@ -63,7 +63,7 @@ jobs:
     steps:
       - uses: denoland/setup-deno@v2
         with:
-          deno-version: v1.x
+          deno-version: v2.x
       - uses: actions/checkout@v4
 
       - run: deno cache source/*.ts
