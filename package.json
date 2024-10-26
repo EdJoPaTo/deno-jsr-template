@@ -27,7 +27,7 @@
 	"dependencies": {},
 	"devDependencies": {
 		"@types/node": "^18.18.13",
-		"deno2node": "1.13.0"
+		"deno2node": "1.14.0"
 	},
 	"files": [
 		"dist",
