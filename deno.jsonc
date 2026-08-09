@@ -22,6 +22,8 @@
 	"fmt": {
 		"useTabs": true
 	},
+	"imports": {
+	},
 	"lint": {
 		"rules": {
 			// https://lint.deno.land/?all=on
