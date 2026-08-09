@@ -1,6 +1,7 @@
 {
 	"name": "@edjopato/deno-jsr-template",
 	"version": "0.0.0",
+	"license": "MIT",
 	"exports": "./source/mod.ts",
 	"lock": false,
 	"nodeModulesDir": "none",
