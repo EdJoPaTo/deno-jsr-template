@@ -8,11 +8,10 @@
 	// https://deno.land/manual/advanced/typescript/configuration
 	// https://www.typescriptlang.org/tsconfig/
 	"compilerOptions": {
-		"noImplicitOverride": true,
+		"erasableSyntaxOnly": true,
 		"noImplicitReturns": true,
 		"noPropertyAccessFromIndexSignature": true,
 		"noUncheckedIndexedAccess": true,
-		"useUnknownInCatchVariables": true
 	},
 	"exclude": [
 		"./coverage/",
@@ -28,6 +27,11 @@
 	"lint": {
 		"rules": {
 			// https://lint.deno.land/?all=on
+			"tags": [
+				"jsr",
+				"recommended",
+				"workspace"
+			],
 			"include": [
 				"camelcase",
 				"default-param-last",
@@ -35,9 +39,19 @@
 				"explicit-module-boundary-types",
 				"no-await-in-loop",
 				"no-eval",
+				"no-inferrable-types",
+				"no-node-globals",
 				"no-non-null-asserted-optional-chain",
 				"no-non-null-assertion",
-				"no-sparse-arrays"
+				"no-process-global",
+				"no-self-compare",
+				"no-sparse-arrays",
+				"no-sync-fn-in-async-fn",
+				"no-undef",
+				"no-useless-rename",
+				"prefer-ascii",
+				"single-var-declarator",
+				"triple-slash-reference"
 			]
 		}
 	},
