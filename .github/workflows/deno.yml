@@ -30,8 +30,8 @@ jobs:
           deno-version: v2.x
       - uses: actions/checkout@v7
 
-      - run: deno cache source/*.ts
-      - run: deno check source/*.ts
+      - run: deno cache ./**/*.ts
+      - run: deno check ./**/*.ts
 
   doc:
     runs-on: ubuntu-latest
@@ -42,7 +42,7 @@ jobs:
           deno-version: v2.x
       - uses: actions/checkout@v7
 
-      - run: deno cache source/mod.ts
+      - run: deno cache ./**/*.ts
       - run: deno doc --lint source/mod.ts
 
   publish-dry-run:
@@ -54,7 +54,7 @@ jobs:
           deno-version: v2.x
       - uses: actions/checkout@v7
 
-      - run: deno cache source/mod.ts
+      - run: deno cache ./**/*.ts
       - run: deno publish --dry-run
 
   test:
@@ -66,6 +66,5 @@ jobs:
           deno-version: v2.x
       - uses: actions/checkout@v7
 
-      - run: deno cache source/*.ts
-      - run: deno test --no-check --coverage=coverage/
-      - run: deno coverage coverage/
+      - run: deno cache ./**/*.ts
+      - run: deno test --no-check --coverage --doc
