@@ -11,7 +11,7 @@
 		"erasableSyntaxOnly": true,
 		"noImplicitReturns": true,
 		"noPropertyAccessFromIndexSignature": true,
-		"noUncheckedIndexedAccess": true,
+		"noUncheckedIndexedAccess": true
 	},
 	"exclude": [
 		"./coverage/",
