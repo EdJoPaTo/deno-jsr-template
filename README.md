@@ -24,8 +24,8 @@ deno add @edjopato/deno-jsr-template
 ## Usage
 
 ```ts
-import { myFunction } from "deno-jsr-template";
+import { someFunction } from "@edjopato/deno-jsr-template";
 
-myFunction("unicorns");
+someFunction("unicorns");
 //=> 'unicorns & rainbows'
 ```
